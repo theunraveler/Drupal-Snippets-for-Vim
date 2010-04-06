@@ -13,8 +13,7 @@ snippet hook_block
 			case 'save':
 			case 'view':
 		}
-	}
-	
+	}	
 snippet hook_menu
 
 	/**
@@ -29,8 +28,7 @@ snippet hook_menu
 		);
 		
 		return $$1;
-	}
-	
+	}	
 snippet hook_form_alter
 
 	/**
@@ -38,10 +36,10 @@ snippet hook_form_alter
 	 */
 	function `Filename()`_form_alter(&$form, $form_state, $form_id) {
 		switch ($form_id) {
-			${1}
+			case '${1:/* your form */}':
+			  ${2:// your code.}
 		}
 	}
-
 snippet hook_help
 
 	/**
@@ -51,10 +49,10 @@ snippet hook_help
 		switch ($path) {
 			case '${1:/* path */}':
 				// Enter your help text below
-				return t('${1:/* text */}');
+				return t('${2:/* text */}');
 		}
 	}
-	
+# Doesn't work.	
 snippet hook_theme
 
   /**
@@ -62,12 +60,11 @@ snippet hook_theme
    */
   function `Filename()`_theme($existing, $type, $theme, $path) {
     return array(
-      '${1:theme_function} => array(
-        ${2:/* See http://api.drupal.org/api/function/hook_theme/6 for options */}
+      '${1:theme_function}' => array(
+        ${2:/* See for options */}
       ),
     );
   }
-  
 snippet hook_nodeapi
 
   /**
@@ -75,11 +72,10 @@ snippet hook_nodeapi
    */
   function `Filename()`_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     switch ($op) {
-      case '${1:/* See http://api.drupal.org/api/function/hook_nodeapi for options}':
+      case '${1:/* See for options}':
         ${2:// Your code here.}
     }
   }
-  
 snippet hook_user
 
   /**
@@ -87,11 +83,10 @@ snippet hook_user
    */
   function `Filename()`_user($op, &$edit, &$account, $category = NULL) {
     switch ($op) {
-      case '${1:/* See http://api.drupal.org/api/function/hook_user/6 for options}':
+      case '${1:/* See for options}':
         ${2:// Your code here.}
     }
   }
-  
 snippet hook_perm
 
   /**
@@ -100,11 +95,8 @@ snippet hook_perm
   function `Filename()`_perm() {
     return array('${1:/* permission */}');
   }
-	
 # Functions ---------------------------------------------------------
-	
 snippet l
 	l(${1:/* text */}, ${2:/* link */})
-	
 snippet t
 	t('${1:/* Your text */}', array(${1:/* arguments */}))
