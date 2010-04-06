@@ -1,0 +1,3 @@
+I'm beginning to see the light: Vim is awesome.
+
+However, there is nothing for Vim that matches the PHP Drupal bundle for Textmate, what with the autocompletion and snippet goodness. So here will be an ongoing attempt to recreate that in Vim using the snipMate plugin.
