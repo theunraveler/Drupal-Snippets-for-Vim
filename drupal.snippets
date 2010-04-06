@@ -1,0 +1,62 @@
+# Hooks ------------------------------------------------------------------
+
+snippet hook_block
+
+	/**
+	 * Implementation of hook_block()
+	 */
+	function `Filename()`_block($op = 'list', $delta = 0, $edit = array()) {
+		switch ($op) {
+			case 'list':
+				${1}
+			case 'configure':
+			case 'save':
+			case 'view':
+		}
+	}
+	
+snippet hook_menu
+
+	/**
+	 * Implementation of hook_menu()
+	 */
+	function `Filename()`_menu() {
+		$items = array();
+		
+		// Put your menu items here.
+		${1}
+		
+		return $items;
+	}
+	
+snippet hook_form_alter
+
+	/**
+	 * Implementation of hook_form_alter()
+	 */
+	function `Filename()`_form_alter(&$form, $form_state, $form_id) {
+		switch ($form_id) {
+			${1}
+		}
+	}
+
+snippet hook_help
+
+	/**
+	 * Implementation of hook_help
+	 */
+	function `Filename()`_help($path, $arg) {
+		switch ($path) {
+			case '${1:/* path */}':
+				// Enter your help text below
+				return t('${1:/* text */}');
+		}
+	}
+	
+# Functions ---------------------------------------------------------
+	
+snippet l
+	l(${1:/* text */}, ${2:/* link */})
+	
+snippet t
+	t('${1:/* Your text */}', array(${1:/* arguments */}))
