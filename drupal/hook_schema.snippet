@@ -4,22 +4,22 @@
  */
 function `Filename()`_schema() {
 	$schema['${1:table}'] = array(
-	  'description' => '${2}',
-	  'fields' => array(
-	    '${3:column}' => array(
-	      'description' => '${4}',
-	      'type' => '${5}',
-	      'unsigned' => ${6},
-	      'not null' => ${7},
+		'description' => '${2}',
+		'fields' => array(
+			'${3:column}' => array(
+				'description' => '${4}',
+				'type' => '${5}',
+				'unsigned' => ${6},
+				'not null' => ${7},
 			),
-	  ),
-	  'indexes' => array(
-	    ${8}
-	  ),
-	  'unique keys' => array(
-	  	${9}
-	  ),
-	  'primary key' => array(${10}),
+		),
+		'indexes' => array(
+			${8}
+		),
+		'unique keys' => array(
+			${9}
+		),
+		'primary key' => array(${10}),
 	);
 	return $schema
 }
