@@ -1,15 +1,19 @@
 
 /**
- * Implementation of hook_menu()
+ * Implements hook_menu().
  */
 function `Filename()`_menu() {
 	$${1:items} = array();
-	
+
 	// Put your menu items here.
 	$$1['${2:path}'] = array(
-	  ${3}
+    'title' => '${3:title}',
+    'page callback' => '${4:page callback}',
+    'access callback' => '${5:access callback}',
+    'access arguments' => array('${6:argument}'),
+    'type' => ${7:MENU_CALLBACK},
 	);
-	
+
 	return $$1;
 }
 
