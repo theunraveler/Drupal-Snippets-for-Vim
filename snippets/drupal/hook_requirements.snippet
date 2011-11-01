@@ -1,0 +1,27 @@
+/*
+ * Implementation of hook_requirements()
+ * @param string $phase
+ *  The phase in which hook_requirements is run:
+ *    'install': the module is being installed.
+ *    'runtime': the runtime requirements are being checked and shown on the status report page.
+ * @return
+ *   A keyed array of requirements. Each requirement is itself an array with the following items:
+ *     'title': the name of the requirement.
+ *     'value': the current value (e.g. version, time, level, ...).
+ *       During install phase, this should only be used for version numbers, do not set it if not applicable.
+ *     'description': description of the requirement/status.
+ *     'severity': the requirement's result/severity level, one of:
+ *       REQUIREMENT_INFO: For info only.
+ *       REQUIREMENT_OK: The requirement is satisfied.
+ *       REQUIREMENT_WARNING: The requirement failed with a warning.
+ *       REQUIREMENT_ERROR: The requirement failed with an error.
+ *
+ */
+function `Filename()`_requirements($phase) {
+  $requirements = array();
+
+  ${1:// Your code here.}
+
+  return $requirements;
+}
+
