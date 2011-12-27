@@ -11,7 +11,7 @@ in your ~/.vim/snippets (or wherever you install your Vim scripts to),
 like so:
 
      cd ~/.vim/snippets # You may have to create it, first.
-     git clone git clone https://github.com/berkes/Drupal-Snippets-for-Vim # checkout
+     git clone git clone https://github.com/theunraveler/Drupal-Snippets-for-Vim # checkout
 
 For the snippets to work, the filetype needs to specify `drupal`.
 
